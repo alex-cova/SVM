@@ -14,6 +14,10 @@
 		FAB9E4A82A7392F2009B3154 /* SVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4A72A7392F2009B3154 /* SVMTests.swift */; };
 		FAB9E4B22A7392F2009B3154 /* SVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4B12A7392F2009B3154 /* SVMUITests.swift */; };
 		FAB9E4B42A7392F2009B3154 /* SVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4B32A7392F2009B3154 /* SVMUITestsLaunchTests.swift */; };
+		FAB9E4C32A739352009B3154 /* JarLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4C22A739352009B3154 /* JarLoader.swift */; };
+		FAB9E4C62A73988F009B3154 /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = FAB9E4C52A73988F009B3154 /* Zip */; };
+		FAB9E4C82A7398C1009B3154 /* ClassEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4C72A7398C1009B3154 /* ClassEntry.swift */; };
+		FAB9E4CA2A739BAB009B3154 /* JarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4C92A739BAB009B3154 /* JarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,9 @@
 		FAB9E4AD2A7392F2009B3154 /* SVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAB9E4B12A7392F2009B3154 /* SVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVMUITests.swift; sourceTree = "<group>"; };
 		FAB9E4B32A7392F2009B3154 /* SVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAB9E4C22A739352009B3154 /* JarLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarLoader.swift; sourceTree = "<group>"; };
+		FAB9E4C72A7398C1009B3154 /* ClassEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassEntry.swift; sourceTree = "<group>"; };
+		FAB9E4C92A739BAB009B3154 /* JarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB9E4C62A73988F009B3154 /* Zip in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +83,8 @@
 		FAB9E4892A7392F1009B3154 = {
 			isa = PBXGroup;
 			children = (
+				FAB9E4C12A739334009B3154 /* VM */,
+				FAB9E4C02A739306009B3154 /* Parser */,
 				FAB9E4942A7392F1009B3154 /* SVM */,
 				FAB9E4A62A7392F2009B3154 /* SVMTests */,
 				FAB9E4B02A7392F2009B3154 /* SVMUITests */,
@@ -100,6 +110,7 @@
 				FAB9E4992A7392F2009B3154 /* Assets.xcassets */,
 				FAB9E49E2A7392F2009B3154 /* SVM.entitlements */,
 				FAB9E49B2A7392F2009B3154 /* Preview Content */,
+				FAB9E4C92A739BAB009B3154 /* JarView.swift */,
 			);
 			path = SVM;
 			sourceTree = "<group>";
@@ -129,6 +140,22 @@
 			path = SVMUITests;
 			sourceTree = "<group>";
 		};
+		FAB9E4C02A739306009B3154 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				FAB9E4C22A739352009B3154 /* JarLoader.swift */,
+				FAB9E4C72A7398C1009B3154 /* ClassEntry.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		FAB9E4C12A739334009B3154 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -145,6 +172,9 @@
 			dependencies = (
 			);
 			name = SVM;
+			packageProductDependencies = (
+				FAB9E4C52A73988F009B3154 /* Zip */,
+			);
 			productName = SVM;
 			productReference = FAB9E4922A7392F1009B3154 /* SVM.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +247,9 @@
 				Base,
 			);
 			mainGroup = FAB9E4892A7392F1009B3154;
+			packageReferences = (
+				FAB9E4C42A73988F009B3154 /* XCRemoteSwiftPackageReference "Zip" */,
+			);
 			productRefGroup = FAB9E4932A7392F1009B3154 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,7 +293,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAB9E4982A7392F1009B3154 /* ContentView.swift in Sources */,
+				FAB9E4CA2A739BAB009B3154 /* JarView.swift in Sources */,
+				FAB9E4C32A739352009B3154 /* JarLoader.swift in Sources */,
 				FAB9E4962A7392F1009B3154 /* SVMApp.swift in Sources */,
+				FAB9E4C82A7398C1009B3154 /* ClassEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +612,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAB9E4C42A73988F009B3154 /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAB9E4C52A73988F009B3154 /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAB9E4C42A73988F009B3154 /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAB9E48A2A7392F1009B3154 /* Project object */;
 }
