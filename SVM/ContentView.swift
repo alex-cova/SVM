@@ -14,33 +14,51 @@ struct ContentView: View {
     @State private var showDestination : Bool = false
     @State private var errorMessage : String?
     
+    @State private var backgroundColor = Color.clear
+    
     private let loader = JarLoader()
     
     var body: some View {
         NavigationStack {
-            VStack {
-                if draggedFile != nil {
-                    Text("Dragged File: \(draggedFile!.absoluteString)")
-                    Button("Run") {
-                        if(loader.load(url: draggedFile!)){
-                            showDestination = true
-                        }else{
-                            errorMessage = "Failed to load jar file"
-                        }
-                    }.buttonStyle(.borderedProminent)
-                } else {
-                    Text("Drag and Drop a Jar file Here")
+            ZStack {
+                backgroundColor
+                
+                VStack{
+                    if draggedFile != nil {
+                        Text("Dragged File: \(draggedFile!.absoluteString)")
+                        Button("Run") {
+                            if(loader.load(url: draggedFile!)){
+                                showDestination = true
+                            }else{
+                                errorMessage = "Failed to load jar file"
+                            }
+                        }.buttonStyle(.borderedProminent)
+                    } else {
+                        Text("Drag and Drop a Jar file Here")
+                            .foregroundColor(isHovering ? Color.white : Color.black)
+                    }
+                    
+                    if(errorMessage != nil) {
+                        Text(errorMessage!)
+                    }
                 }
                 
-                if(errorMessage != nil) {
-                    Text(errorMessage!)
-                }
+            } .onHover { isHovering in
+                self.isHovering = isHovering
                 
-            }.navigationDestination(isPresented: $showDestination){
+                if isHovering {
+                    self.backgroundColor = Color.blue.opacity(0.7)
+                }else{
+                    self.backgroundColor = Color.clear
+                }
+            }
+            .animation(.easeInOut, value: isHovering)
+            .navigationDestination(isPresented: $showDestination){
                 JarView()
                     .environmentObject(loader)
+                    .navigationBarBackButtonHidden(true)
             }
-        }
+        }.navigationTitle("Drop & Load")
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .onDrop(of: [.fileURL], isTargeted: $isHovering) { providers -> Bool in
             if let itemProvider = providers.first,
@@ -56,11 +74,7 @@ struct ContentView: View {
             }
             return false
         }
-        .onHover { isHovering in
-            self.isHovering = isHovering
-        }
-        .background(isHovering ? Color.blue.opacity(0.7) : Color.clear)
-        .animation(.easeInOut)
+       
     }
 }
 

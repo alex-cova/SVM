@@ -9,13 +9,15 @@ import SwiftUI
 
 struct JarView: View {
     
-    
     @EnvironmentObject var loader : JarLoader
     
     var body: some View {
-        List(loader.entries, id: \.self) { entry in
-            Label(entry.cannonicalName, systemImage: entry.icon )
-            .frame(height: 35)
+        VStack {
+            List(loader.entries, id: \.self) { entry in
+                NavigationLink(entry.cannonicalName, destination: HexView(entry: entry)
+                    .navigationBarBackButtonHidden(false))
+                
+            }
         }.navigationTitle(loader.jarName)
     }
 }

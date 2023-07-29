@@ -11,7 +11,7 @@ import Zip
 
 class JarLoader : ObservableObject {
     
-    var entries : [ClassEntry] = []
+    var entries : [ClassFile] = []
     var files : [URL]?
     var jarFile : URL?
     var jarName = ""
@@ -42,7 +42,7 @@ class JarLoader : ObservableObject {
             print("Loaded \(files.count) files in jar")
             
             for f in files {
-                entries.append(ClassEntry(f, parentUrl))
+                entries.append(ClassFile(f, parentUrl))
             }
             
             self.files = files
