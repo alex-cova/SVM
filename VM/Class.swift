@@ -16,5 +16,16 @@ class Class {
             return package + "." + name
         }
     }
+    var minorVersion : UInt16 = 0
+    var mayorVersion : UInt16 = 0
+    var constantPool = ConstantPool()
+    var accessFlags : UInt16 = 0
     
+    var methods : [Method] = []
+    var interfaces : [String] = []
+    var fields : [Field] = []
+    
+    func addConstant(value : Any) {
+        constantPool.add(value: value)
+    }
 }

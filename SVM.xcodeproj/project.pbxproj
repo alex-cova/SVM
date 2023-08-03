@@ -14,7 +14,6 @@
 		FAB9E4962A7392F1009B3154 /* SVMApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4952A7392F1009B3154 /* SVMApp.swift */; };
 		FAB9E4982A7392F1009B3154 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4972A7392F1009B3154 /* ContentView.swift */; };
 		FAB9E49A2A7392F2009B3154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB9E4992A7392F2009B3154 /* Assets.xcassets */; };
-		FAB9E49D2A7392F2009B3154 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAB9E49C2A7392F2009B3154 /* Preview Assets.xcassets */; };
 		FAB9E4A82A7392F2009B3154 /* SVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4A72A7392F2009B3154 /* SVMTests.swift */; };
 		FAB9E4B22A7392F2009B3154 /* SVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4B12A7392F2009B3154 /* SVMUITests.swift */; };
 		FAB9E4B42A7392F2009B3154 /* SVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4B32A7392F2009B3154 /* SVMUITestsLaunchTests.swift */; };
@@ -31,6 +30,15 @@
 		FAB9E4D82A7495E7009B3154 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4D72A7495E7009B3154 /* Method.swift */; };
 		FAB9E4DA2A74962A009B3154 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4D92A74962A009B3154 /* Instruction.swift */; };
 		FAB9E4DC2A7497AC009B3154 /* ClassLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB9E4DB2A7497AC009B3154 /* ClassLoader.swift */; };
+		FAF1C25E2A79876A0013CA1F /* ContantPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C25D2A79876A0013CA1F /* ContantPool.swift */; };
+		FAF1C2602A7994020013CA1F /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C25F2A7994020013CA1F /* Field.swift */; };
+		FAF1C2662A79BE690013CA1F /* ExceptionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C2652A79BE690013CA1F /* ExceptionTable.swift */; };
+		FAF1C2682A79BEA00013CA1F /* ExceptionTableEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C2672A79BEA00013CA1F /* ExceptionTableEntry.swift */; };
+		FAF1C26A2A79BEB40013CA1F /* ProgramCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C2692A79BEB40013CA1F /* ProgramCounter.swift */; };
+		FAF1C26C2A79BF760013CA1F /* LineNumberTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C26B2A79BF760013CA1F /* LineNumberTable.swift */; };
+		FAF1C26E2A79BF9C0013CA1F /* LineNumberTableEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C26D2A79BF9C0013CA1F /* LineNumberTableEntry.swift */; };
+		FAF1C2702A79BFAC0013CA1F /* LineNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C26F2A79BFAC0013CA1F /* LineNumber.swift */; };
+		FAF1C2722A79C2E60013CA1F /* Buffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF1C2712A79C2E60013CA1F /* Buffer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +86,15 @@
 		FAB9E4D72A7495E7009B3154 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		FAB9E4D92A74962A009B3154 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		FAB9E4DB2A7497AC009B3154 /* ClassLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassLoader.swift; sourceTree = "<group>"; };
+		FAF1C25D2A79876A0013CA1F /* ContantPool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContantPool.swift; sourceTree = "<group>"; };
+		FAF1C25F2A7994020013CA1F /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
+		FAF1C2652A79BE690013CA1F /* ExceptionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionTable.swift; sourceTree = "<group>"; };
+		FAF1C2672A79BEA00013CA1F /* ExceptionTableEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExceptionTableEntry.swift; sourceTree = "<group>"; };
+		FAF1C2692A79BEB40013CA1F /* ProgramCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCounter.swift; sourceTree = "<group>"; };
+		FAF1C26B2A79BF760013CA1F /* LineNumberTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberTable.swift; sourceTree = "<group>"; };
+		FAF1C26D2A79BF9C0013CA1F /* LineNumberTableEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumberTableEntry.swift; sourceTree = "<group>"; };
+		FAF1C26F2A79BFAC0013CA1F /* LineNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNumber.swift; sourceTree = "<group>"; };
+		FAF1C2712A79C2E60013CA1F /* Buffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buffer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,9 +198,9 @@
 			children = (
 				FAB9E4C22A739352009B3154 /* JarLoader.swift */,
 				FAB9E4C72A7398C1009B3154 /* ClassFile.swift */,
-				FA6B06932A74E7FF003C277C /* Attribute.swift */,
 				FA6B06982A74F60B003C277C /* ClassReader.swift */,
 				FA6B069A2A74F80F003C277C /* ParsingException.swift */,
+				FAF1C2712A79C2E60013CA1F /* Buffer.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
@@ -197,8 +214,17 @@
 				FAB9E4D32A7492F8009B3154 /* OpCodes.swift */,
 				FAB9E4D52A7495D3009B3154 /* Class.swift */,
 				FAB9E4D72A7495E7009B3154 /* Method.swift */,
+				FA6B06932A74E7FF003C277C /* Attribute.swift */,
 				FAB9E4D92A74962A009B3154 /* Instruction.swift */,
 				FAB9E4DB2A7497AC009B3154 /* ClassLoader.swift */,
+				FAF1C25D2A79876A0013CA1F /* ContantPool.swift */,
+				FAF1C25F2A7994020013CA1F /* Field.swift */,
+				FAF1C2652A79BE690013CA1F /* ExceptionTable.swift */,
+				FAF1C2672A79BEA00013CA1F /* ExceptionTableEntry.swift */,
+				FAF1C2692A79BEB40013CA1F /* ProgramCounter.swift */,
+				FAF1C26B2A79BF760013CA1F /* LineNumberTable.swift */,
+				FAF1C26D2A79BF9C0013CA1F /* LineNumberTableEntry.swift */,
+				FAF1C26F2A79BFAC0013CA1F /* LineNumber.swift */,
 			);
 			path = VM;
 			sourceTree = "<group>";
@@ -313,7 +339,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAB9E49D2A7392F2009B3154 /* Preview Assets.xcassets in Resources */,
 				FAB9E49A2A7392F2009B3154 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,19 +368,28 @@
 				FAB9E4982A7392F1009B3154 /* ContentView.swift in Sources */,
 				FAB9E4CA2A739BAB009B3154 /* JarView.swift in Sources */,
 				FAB9E4D02A749097009B3154 /* Descriptor.swift in Sources */,
+				FAF1C2662A79BE690013CA1F /* ExceptionTable.swift in Sources */,
 				FAB9E4C32A739352009B3154 /* JarLoader.swift in Sources */,
 				FAB9E4962A7392F1009B3154 /* SVMApp.swift in Sources */,
 				FAB9E4D62A7495D3009B3154 /* Class.swift in Sources */,
+				FAF1C2702A79BFAC0013CA1F /* LineNumber.swift in Sources */,
+				FAF1C2722A79C2E60013CA1F /* Buffer.swift in Sources */,
+				FAF1C26C2A79BF760013CA1F /* LineNumberTable.swift in Sources */,
 				FA6B06992A74F60B003C277C /* ClassReader.swift in Sources */,
 				FAB9E4D22A74928E009B3154 /* ClassVersion.swift in Sources */,
 				FAB9E4CE2A741F8E009B3154 /* HexView.swift in Sources */,
+				FAF1C2602A7994020013CA1F /* Field.swift in Sources */,
 				FAB9E4D82A7495E7009B3154 /* Method.swift in Sources */,
 				FAB9E4DA2A74962A009B3154 /* Instruction.swift in Sources */,
 				FA6B069B2A74F80F003C277C /* ParsingException.swift in Sources */,
 				FA6B06972A74F478003C277C /* Extensions.swift in Sources */,
 				FAB9E4D42A7492F8009B3154 /* OpCodes.swift in Sources */,
 				FAB9E4CC2A741377009B3154 /* Modifiers.swift in Sources */,
+				FAF1C25E2A79876A0013CA1F /* ContantPool.swift in Sources */,
+				FAF1C26E2A79BF9C0013CA1F /* LineNumberTableEntry.swift in Sources */,
+				FAF1C2682A79BEA00013CA1F /* ExceptionTableEntry.swift in Sources */,
 				FAB9E4C82A7398C1009B3154 /* ClassFile.swift in Sources */,
+				FAF1C26A2A79BEB40013CA1F /* ProgramCounter.swift in Sources */,
 				FAB9E4DC2A7497AC009B3154 /* ClassLoader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

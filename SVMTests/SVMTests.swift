@@ -9,28 +9,52 @@ import XCTest
 @testable import SVM
 
 final class SVMTests: XCTestCase {
-
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
-
+    
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testClassReader() throws {
+        
+        let fileManager = FileManager.default
+        
+        // Get the URL of the desktop directory
+        guard let desktopURL = fileManager.urls(for: .desktopDirectory, in: .userDomainMask).first else {
+            print("Unable to access the desktop directory.")
+            return
+        }
+        
+        let jarUrl = desktopURL.appendingPathComponent("EscPosPrinter.jar")
+        
+        let loader = JarLoader()
+        
+        let result = loader.load(url: jarUrl)
+        
+        print("Load result: \(result)")
+        
+        
+        for entry in loader.entries {
+            
+            if entry.package.isEmpty {
+                continue
+            }
+            
+            let clazz = entry.read()
+            
+            print("\(clazz.name) minor: \(clazz.minorVersion) mayor: \(clazz.mayorVersion)")
+        }
+        
     }
-
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-
+    
 }
